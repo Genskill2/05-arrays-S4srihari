@@ -7,7 +7,7 @@ int max(int a[], int);
 int max(int a[],int i){
 int m= a[0];
   for (int j=0;j<i;j++){
-  if (m<a[j]){m=a[j]}
+  if (m<a[j]){m=a[j];}
   }
 return m;}
 int main(void) {
