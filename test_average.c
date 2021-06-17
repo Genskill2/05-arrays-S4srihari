@@ -8,7 +8,7 @@ float average(int a[], int i){int sum=0;float avg;
 for (int j=0;j<i;j++){
  sum =sum + a[j];
  }
-float avg = sum/(float)i;
+avg = sum/(float)i;
  return avg;                             
 }
 
