@@ -23,12 +23,12 @@ int min = a[0] ;
 }
 /*average function */
 float average(int a[], int n){
- float sum = 0 ;
+ float sum = 0.0,avg=0.0;
      for(int i=0; i<n ; i++){
        sum = sum + a[i];
 
-    }
-    return sum/(float)n;
+    } avg =sum/(float)n;
+    return avg;
 }
 /* mode function */
 int mode(int a[], int length){
