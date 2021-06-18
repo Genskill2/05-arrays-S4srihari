@@ -3,6 +3,7 @@
 
 
 int isprime(int n);
+int factors(int x, int arr[]);
 
 int main(void) {
   int ret[100] = {0};
