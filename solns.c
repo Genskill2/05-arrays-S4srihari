@@ -28,7 +28,7 @@ float average(int a[], int n){
        sum = sum + a[i];
 
     }
-    return sum/n;
+    return sum/(float)n;
 }
 /* mode function */
 int mode(int a[], int length){
