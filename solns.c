@@ -20,7 +20,7 @@ int min(int a[],int length){
 }
 
 float average(int a[],int length){
-    int total=0;
+    float total=0;
     for(int i=0;i<length;i++){
         total=total+a[i];
     }
