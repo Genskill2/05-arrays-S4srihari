@@ -1,61 +1,48 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
 
-/* max function */
-int max(int a[], int n){
-int m=0 ;
- for ( int i = 0; i < n ; i++){
-    if (a[i] > m){
-         m = a[i];
-        }
-      }
-  return m;
+int max(int a[],int length){
+    int largest=a[0];
+    for(int i=0;i<length;i++){
+        if(largest<a[i]){largest=a[i];}
+        else{largest=largest;}
+    }
+    return largest;
 }
 
-/* min function*/
-int min(int a[], int n){
-int min = a[0] ;
-     for(int i=1 ; i<n ; i++){
-       if(a[i]<min)
-       min = a[i];
-  }
- return min;
+int min(int a[],int length){
+    int smallest=a[0];
+    for(int i=0;i<length;i++){
+        if(smallest>a[i]){smallest=a[i];}
+        else{smallest=smallest;}
+    }
+    return smallest;
 }
-/*average function */
-float average(int a[], int n){
- float sum = 0.0,avg=0.0;
-     for(int i=0; i<n ; i++){
-       sum = sum + a[i];
 
-    } avg =sum/(float)n;
+float average(int a[],int length){
+    int total=0;
+    for(int i=0;i<length;i++){
+        total=total+a[i];
+    }
+    float avg=total/(float)length;
     return avg;
 }
-/* mode function */
-int mode(int a[], int length){
-   int n = max(a,length);
-   int p = min(a,length);
-   int counts[100],  d=-1;
-       for(int i = p; i <= n ; i++){
-         int c = 0;
-          for ( int j=0; j<length; j++){
-            if(a[j]==i){
-               c++;
+
+int mode(int a[],int length){
+    int value=0;
+    int max_count=0;
+    for(int i=0;i<length;i++){
+          int count=0;
+          for(int j=0;j<length;j++){
+            if(a[j]==a[i]){count=count+1;}
           }
-           
-      }   
-     counts[++d] = c;
-  }
-  
-  int b = 0,f = 0 ;
-  for (int i=0 ; i<=d ; i++){
-    if ( counts[i] > b ){
-       b = counts[i];
-       f = i+p;
-     }
-   }
-    return f;
+          if (max_count<count){
+            value=a[i];
+            max_count=count;
+          }
+    }
+    return value;
 }
-/*factors function */
 int isprime(int n){
   for (int i = 2; i<n; i++){
     if(n%i==0){
