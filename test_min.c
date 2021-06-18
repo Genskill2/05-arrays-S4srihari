@@ -2,7 +2,7 @@
 #include <assert.h>
 
 
-
+int min(int a[],int length);
 
 int main(void) {
   int x[] = {9,5,6,10,2,-3,4};
