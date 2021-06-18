@@ -2,7 +2,7 @@
 #include <assert.h>
 
 
-int max(int a[],int length);
+int max(int [],int length);
 
 int main(void) {
   int x[] = {9,5,6,10,2,-3,4};
