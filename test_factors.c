@@ -2,6 +2,7 @@
 #include <assert.h>
 
 
+int isprime(int n);
 
 int main(void) {
   int ret[100] = {0};
