@@ -1,24 +1,6 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
 
-int max(int a[],int length){
-    int largest=a[0];
-    for(int i=0;i<length;i++){
-        if(largest<a[i]){largest=a[i];}
-        else{largest=largest;}
-    }
-    return largest;
-}
-
-int min(int a[],int length){
-    int smallest=a[0];
-    for(int i=0;i<length;i++){
-        if(smallest>a[i]){smallest=a[i];}
-        else{smallest=smallest;}
-    }
-    return smallest;
-}
-
 float average(int a[],int length){
     float total=0;
     for(int i=0;i<length;i++){
@@ -28,21 +10,6 @@ float average(int a[],int length){
     return avg;
 }
 
-int mode(int a[],int length){
-    int value=0;
-    int max_count=0;
-    for(int i=0;i<length;i++){
-          int count=0;
-          for(int j=0;j<length;j++){
-            if(a[j]==a[i]){count=count+1;}
-          }
-          if (max_count<count){
-            value=a[i];
-            max_count=count;
-          }
-    }
-    return value;
-}
 int isprime(int n){
   for (int i = 2; i<n; i++){
     if(n%i==0){
@@ -75,3 +42,36 @@ int factors(int x, int arr[]){
      }
    return cnt+1;
  }
+int max(int a[],int length){
+    int largest=a[0];
+    for(int i=0;i<length;i++){
+        if(largest<a[i]){largest=a[i];}
+        else{largest=largest;}
+    }
+    return largest;
+}
+
+int min(int a[],int length){
+    int smallest=a[0];
+    for(int i=0;i<length;i++){
+        if(smallest>a[i]){smallest=a[i];}
+        else{smallest=smallest;}
+    }
+    return smallest;
+}
+
+int mode(int a[],int length){
+    int value=0;
+    int max_count=0;
+    for(int i=0;i<length;i++){
+          int count=0;
+          for(int j=0;j<length;j++){
+            if(a[j]==a[i]){count=count+1;}
+          }
+          if (max_count<count){
+            value=a[i];
+            max_count=count;
+          }
+    }
+    return value;
+}
