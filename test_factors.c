@@ -4,7 +4,7 @@
 
 int factors(int,int []);
 
-  int main(void) {
+int main(void) {
   int ret[100] = {0};
   int count = factors(180, ret);
   assert (count == 5);
